@@ -1,8 +1,8 @@
 import time
 import paramiko
 
-source_server='jbb01'
-destination_server='carrot'
+source_server='****'
+destination_server='****'
 source_run_id='1483364735'
 destination_run_id='15614431'
 source_QL2_DAY='5895'
@@ -27,14 +27,13 @@ commands = ['sudo su - caesius', 'javadev','ssh '+source_server+'',
 
 #'scp -r /caesius/storage/results/5741/1465563354 carrot:/tmp/1465563354']
 
-#prod_parametrs='http://live.ql2.com/sys/diag/viewrun.jsp?id=1483364735'
-#alpha_parametrs='http://live-alpha.ql2.com/sys/diag/viewrun.jsp?id=15614431'
+
 
 
 
 client = paramiko.SSHClient()
 client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-client.connect('noni.ql2.com', username='javadev', password='javadev',port=22)
+client.connect('host_name', username='****', password='****',port=22)
 channel = client.invoke_shell()
 
 # clear welcome message and send newline
